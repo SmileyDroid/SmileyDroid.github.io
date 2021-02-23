@@ -1,0 +1,250 @@
+*, html, body {
+  position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position:fixed;
+  width: 100%;
+  z-index: 9999 !important;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: .5rem;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  /*color: white;*/
+  padding: 1rem;
+  display: block;
+}
+
+.naslovna {
+  color: orange;
+}
+
+.navbar-links li:hover {
+  background-color: #555;
+}
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+
+.container {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.full_half {
+    display: inline-block;
+    width: 50%;
+    height: 924px; /*maksimalna visina na velikom ekranu-->*/
+    /*float: left;*/
+    min-height: 100px;
+    position: relative;
+}
+
+
+
+.text {
+    box-sizing: border-box;
+}
+
+.center-text {
+    position: absolute;
+    text-align: center;
+    top: 35%;
+    padding-left: 25%;
+    padding-right: 25%;
+    font-size: 30px;
+    font-size: 2vw;
+}
+
+.imgslide {
+  height: 924px;
+  width: 100%;
+  object-fit: fill;
+}
+
+ /*@media screen and (max-height: 400px) { /*RESIZING OPTIONS*/
+/*--> .full_half {
+    height: 300px;
+  }
+  
+  .center-text {
+    position: absolute;
+    padding: 2%;
+    text-align: center;
+    font-size: 1.5vw;
+
+  }
+
+  .imgslide {
+    height: 300px;
+    width: 100%;
+  }
+}
+<--*/
+
+/*@media screen and (max-height: 600px) { /*RESIZING OPTIONS*/
+/*-->  .full_half {
+    height: 400px;
+  }
+  .center-text {
+    position: absolute;
+    padding: 2%;
+    text-align: center;
+    font-size: 1.5vw;
+
+  }
+
+  .imgslide {
+    height: 400px;
+    width: 100%;
+  }
+}
+<--*/
+
+/*-->@media screen and (max-height: 800px) { /*RESIZING OPTIONS*/
+/*-->  .full_half {
+    height: 600px;
+  }
+  .center-text {
+    position: absolute;
+    padding: 2%;
+    text-align: center;
+    font-size: 1.5vw;
+
+  }
+
+  .imgslide {
+    height: 600px;
+    width: 100%;
+  }
+}
+<--*/
+
+
+@media screen and (max-width: 480px) { /*RESIZING OPTIONS*/
+
+    .toggle-button {
+    display:flex;
+  }
+
+    .navbar-links {
+    display: none;
+    width: 100%;
+    
+  }
+    .navbar{
+      
+    flex-direction: column;
+    background-color: #000000CC;
+    align-items: flex-start;
+  }
+
+    .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+    }
+
+    .navbar-links li {
+    text-align:center;
+    }
+
+    .navbar-links li a {
+    padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+    display: flex;
+    }
+
+    .container {
+      flex-direction: column;
+    }
+
+    .full_half {
+      width: 100%;
+    }
+    
+    
+    .pic {
+      order: 1;
+      max-height: 300px; /*maksimalna visina na manjem ekranu-->*/
+    }
+    
+    .text{
+     order: 2;
+     max-height: 300px; /*maksimalna visina na manjem ekranu*/
+     
+    }
+
+    .center-text {
+      position: absolute;
+      text-align: center;
+      font-size: 3vw;
+
+    }
+
+    .imgslide {
+      height: 300px;
+      width: 100%;
+    }
+
+}
